@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView goSignup;
 
     // our actual server URL
-    private static final String LOGIN_URL = "http://10.178.117.191/safety_app/login.php";
+    private static final String LOGIN_URL = "http://192.168.43.33/safety_app/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -25,8 +25,8 @@ public class ContactListActivity extends AppCompatActivity {
     SessionManager session;
 
     //  our actual server URLs
-    private static final String GET_URL    = "http://10.178.117.191/safety_app/get_contacts.php";
-    private static final String DELETE_URL = "http://10.178.117.191/safety_app/delete_contact.php";
+    private static final String GET_URL    = "http://192.168.43.33/safety_app/get_contacts.php";
+    private static final String DELETE_URL = "http://192.168.43.33/safety_app/delete_contact.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

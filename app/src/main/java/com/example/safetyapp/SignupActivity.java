@@ -21,7 +21,7 @@ public class SignupActivity extends AppCompatActivity {
     TextView goLogin;
 
     //our actual server URL
-    private static final String SIGNUP_URL = "http://10.178.117.191/safety_app/signup.php";
+    private static final String SIGNUP_URL = "http://192.168.43.33/safety_app/signup.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
