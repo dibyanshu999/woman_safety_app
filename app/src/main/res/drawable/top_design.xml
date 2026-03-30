@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="320dp"
+    android:viewportWidth="320"
+    android:viewportHeight="320">
+
+    <!-- OUTER WAVY ARC -->
+    <path
+        android:pathData="M320,0
+                          C260,60 280,140 200,200
+                          C140,250 60,280 0,320"
+        android:strokeColor="#FF3CAC"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- MIDDLE WAVY ARC -->
+    <path
+        android:pathData="M320,40
+                          C270,90 290,160 220,210
+                          C160,260 80,290 40,320"
+        android:strokeColor="#784BA0"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"/>
+
+    <!-- INNER WAVY ARC -->
+    <path
+        android:pathData="M320,80
+                          C280,120 300,180 240,230
+                          C180,270 100,300 80,320"
+        android:strokeColor="#2B86C5"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"/>
+
+</vector>

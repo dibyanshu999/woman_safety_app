@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#000000">
+    <!--  Title  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="24dp">
+        <TextView android:id="@+id/title" android:text="Login or Signup" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginTop="60dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!--  Email Box  -->
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/emailLayout" android:layout_below="@id/title" android:layout_marginTop="40dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:endIconDrawable="@android:drawable/ic_dialog_email" app:endIconMode="custom" app:boxBackgroundMode="filled" app:boxBackgroundColor="#2A2A2A" app:boxCornerRadiusTopStart="30dp" app:boxCornerRadiusTopEnd="30dp" app:boxCornerRadiusBottomStart="30dp" app:boxCornerRadiusBottomEnd="30dp" app:boxStrokeWidth="0dp" app:boxStrokeWidthFocused="0dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/email" android:hint="Enter Email" android:textColor="#FFFFFF" android:textColorHint="#888888" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Password Box  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_below="@id/emailLayout" android:layout_marginTop="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:endIconMode="password_toggle" app:boxBackgroundMode="filled" app:boxBackgroundColor="#2A2A2A" app:boxCornerRadiusTopStart="30dp" app:boxCornerRadiusTopEnd="30dp" app:boxCornerRadiusBottomStart="30dp" app:boxCornerRadiusBottomEnd="30dp" app:boxStrokeWidth="0dp" app:boxStrokeWidthFocused="0dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:hint="Password" android:textColor="#FFFFFF" android:textColorHint="#888888" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Gradient Button  -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/loginBtn" android:text="Log in" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="55dp" android:layout_below="@id/emailLayout" android:layout_marginTop="140dp" android:background="@drawable/btn_glow" app:backgroundTint="@null" app:cornerRadius="30dp" android:elevation="12dp"/>
+        <!--  Signup Text  -->
+        <TextView android:id="@+id/goSignup" android:text="Don't have an account? Sign up" android:textColor="#AAAAAA" android:layout_below="@id/loginBtn" android:layout_marginTop="20dp" android:layout_centerHorizontal="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>

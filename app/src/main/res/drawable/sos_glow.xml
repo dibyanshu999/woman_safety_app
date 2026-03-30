@@ -1,0 +1,23 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- OUTER GLOW -->
+    <item>
+        <shape>
+            <solid android:color="#55FF0000"/>
+            <corners android:radius="120dp"/>
+        </shape>
+    </item>
+
+    <!-- INNER BUTTON -->
+    <item android:top="6dp" android:bottom="6dp" android:left="6dp" android:right="6dp">
+        <shape>
+            <gradient
+                android:startColor="#FF0000"
+                android:centerColor="#FF3B3B"
+                android:endColor="#8B0000"
+                android:angle="0"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+</layer-list>

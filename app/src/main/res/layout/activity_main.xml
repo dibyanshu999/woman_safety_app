@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0D0D0D">
+    <View android:id="@+id/topPanel" android:layout_width="match_parent" android:layout_height="50dp" android:background="@drawable/top_panel_bg"/>
+    <!--  TOP CARD  -->
+    <LinearLayout android:id="@+id/topCard" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="14dp" android:layout_margin="16dp" android:background="@drawable/card_dark" android:gravity="center_vertical">
+        <ImageView android:src="@android:drawable/ic_menu_mylocation" app:tint="#4DA3FF" android:layout_width="22dp" android:layout_height="22dp"/>
+        <TextView android:text="Nearby safe space" android:id="@+id/mapBtn" android:textSize="13sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginStart="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <!--  TITLE  -->
+    <TextView android:id="@+id/title" android:text="Are you in emergency?" android:textSize="18sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_below="@id/topCard" android:layout_centerHorizontal="true" android:layout_marginTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <TextView android:text="Press the button to send an alert" android:textSize="13sp" android:textColor="#AAAAAA" android:layout_below="@id/title" android:layout_centerHorizontal="true" android:layout_marginTop="6dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <androidx.camera.view.PreviewView android:id="@+id/previewView" android:layout_width="match_parent" android:layout_height="match_parent" android:visibility="gone"/>
+    <!--  SOS BUTTON  -->
+    <FrameLayout android:id="@+id/sosContainer" android:layout_width="170dp" android:layout_height="170dp" android:layout_below="@id/title" android:layout_centerHorizontal="true" android:layout_marginTop="40dp">
+        <View android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/sos_outer_dark"/>
+        <Button android:id="@+id/sosBtn" android:layout_width="130dp" android:layout_height="130dp" android:layout_gravity="center" android:background="@drawable/sos_inner_dark" android:text="SOS" android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold"/>
+    </FrameLayout>
+    <!--  CARDS SECTION (FIXED POSITION)  -->
+    <LinearLayout android:id="@+id/cardsLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@id/bottomNav" android:layout_below="@id/sosContainer" android:layout_marginTop="11dp" android:layout_marginBottom="-11dp" android:gravity="center" android:orientation="horizontal" android:padding="12dp" android:weightSum="3">
+        <!--  Emergency Contacts  -->
+        <androidx.cardview.widget.CardView android:id="@+id/cardContacts" android:layout_width="0dp" android:layout_height="166dp" android:layout_margin="6dp" android:layout_weight="1" app:cardElevation="0dp" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="166dp" android:gravity="center" android:background="@drawable/card_dark" android:orientation="vertical">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_call" app:tint="#FE5000"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Emergency" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--  Self Defense  -->
+        <androidx.cardview.widget.CardView android:id="@+id/cardTips" android:layout_width="0dp" android:layout_height="165dp" android:layout_margin="6dp" android:layout_weight="1" app:cardElevation="0dp" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="168dp" android:gravity="center" android:background="@drawable/card_dark" android:orientation="vertical">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_security" app:tint="#FE5000"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Defense" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--  Guidelines  -->
+        <androidx.cardview.widget.CardView android:id="@+id/cardGuide" android:layout_width="0dp" android:layout_height="166dp" android:layout_margin="6dp" android:layout_weight="1" android:background="@drawable/card_glow" app:cardElevation="0dp" app:cardCornerRadius="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="168dp" android:gravity="center" android:background="@drawable/card_dark" android:orientation="vertical">
+                <ImageView android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/ic_menu_book" app:tint="#FE5000"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Guide" android:textColor="#FFFFFF" android:textSize="12sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/bottomNav" android:layout_width="match_parent" android:layout_height="60dp" android:layout_alignParentBottom="true" android:orientation="horizontal" android:gravity="center" android:weightSum="3" android:background="@android:color/transparent">
+        <!--  ADD  -->
+        <LinearLayout android:id="@+id/addLayout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:src="@android:drawable/ic_input_add" android:layout_width="24dp" android:layout_height="24dp" app:tint="#AAAAAA"/>
+            <TextView android:text="Add" android:textSize="12sp" android:textColor="#AAAAAA" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <!--  CONTACT  -->
+        <LinearLayout android:id="@+id/contactLayout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:src="@android:drawable/ic_menu_call" android:layout_width="22dp" android:layout_height="22dp"/>
+            <TextView android:text="Contacts" android:textSize="11sp" android:textColor="#AAAAAA" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <!--  LOGOUT  -->
+        <LinearLayout android:id="@+id/logoutLayout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" android:orientation="vertical">
+            <ImageView android:src="@android:drawable/ic_lock_power_off" android:layout_width="22dp" android:layout_height="22dp"/>
+            <TextView android:text="Logout" android:textSize="11sp" android:textColor="#AAAAAA" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

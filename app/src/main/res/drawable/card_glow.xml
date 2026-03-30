@@ -1,0 +1,32 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- OUTER GLOW -->
+    <item>
+        <shape>
+            <gradient
+                android:startColor="#66FF3CAC"
+                android:centerColor="#66784BA0"
+                android:endColor="#662B86C5"
+                android:angle="0"/>
+            <corners android:radius="20dp"/>
+        </shape>
+    </item>
+
+    <!-- INNER CARD -->
+    <item
+        android:top="3dp"
+        android:bottom="3dp"
+        android:left="3dp"
+        android:right="3dp">
+
+        <shape>
+            <gradient
+                android:startColor="#FF3CAC"
+                android:centerColor="#784BA0"
+                android:endColor="#2B86C5"
+                android:angle="0"/>
+            <corners android:radius="16dp"/>
+        </shape>
+    </item>
+
+</layer-list>

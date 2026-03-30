@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#000000">
+    <!--  TOP RIGHT WAVES  -->
+    <!--  MAIN CONTENT  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:padding="24dp">
+        <!--  TITLE  -->
+        <TextView android:text="Create Account" android:textSize="30sp" android:textStyle="bold" android:textColor="#FFFFFF" android:layout_marginBottom="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <!--  EMAIL  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:endIconDrawable="@android:drawable/ic_dialog_email" app:endIconMode="custom" app:boxBackgroundMode="filled" app:boxBackgroundColor="#2A2A2A" app:boxCornerRadiusTopStart="30dp" app:boxCornerRadiusTopEnd="30dp" app:boxCornerRadiusBottomStart="30dp" app:boxCornerRadiusBottomEnd="30dp" app:boxStrokeWidth="0dp" app:boxStrokeWidthFocused="0dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/email" android:hint="Enter Email" android:textColor="#FFFFFF" android:textColorHint="#888888" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  PASSWORD  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:endIconMode="password_toggle" app:boxBackgroundMode="filled" app:boxBackgroundColor="#2A2A2A" app:boxCornerRadiusTopStart="30dp" app:boxCornerRadiusTopEnd="30dp" app:boxCornerRadiusBottomStart="30dp" app:boxCornerRadiusBottomEnd="30dp" app:boxStrokeWidth="0dp" app:boxStrokeWidthFocused="0dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/password" android:hint="Password" android:textColor="#FFFFFF" android:textColorHint="#888888" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  CONFIRM PASSWORD  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="25dp" app:endIconMode="password_toggle" app:boxBackgroundMode="filled" app:boxBackgroundColor="#2A2A2A" app:boxCornerRadiusTopStart="30dp" app:boxCornerRadiusTopEnd="30dp" app:boxCornerRadiusBottomStart="30dp" app:boxCornerRadiusBottomEnd="30dp" app:boxStrokeWidth="0dp" app:boxStrokeWidthFocused="0dp">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/confirmPassword" android:hint="Confirm Password" android:textColor="#FFFFFF" android:textColorHint="#888888" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  GLOW BUTTON  -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/signupBtn" android:text="Sign Up" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="55dp" android:background="@drawable/btn_glow" app:backgroundTint="@null" android:elevation="12dp" android:layout_marginBottom="20dp"/>
+        <!--  LOGIN REDIRECT  -->
+        <TextView android:id="@+id/goLogin" android:text="Already have an account? Login" android:textColor="#AAAAAA" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</FrameLayout>
